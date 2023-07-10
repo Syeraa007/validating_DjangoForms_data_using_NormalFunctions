@@ -9,8 +9,8 @@ def validate_len(value):
         raise forms.ValidationError("Name should be more than 5 chars")
     
 class StudentForm(forms.Form):
-    Sname=forms.CharField(max_length=100,help_text='Enter name',label="Name",validators=[validate_name,validate_len])
-    # Sage=forms.IntegerField(help_text='Enter age',label='Age')
-    # cls=forms.IntegerField(help_text='Enter class',label='Class')
-    # loc=forms.CharField(help_text='Enter location',label='Location')
+    name=forms.CharField(max_length=100,help_text='Enter name',label="Name",validators=[validate_name,validate_len])
+    age=forms.IntegerField(help_text='Enter age',label='Age')
+    cls=forms.IntegerField(help_text='Enter class',label='Class')
+    loc=forms.CharField(help_text='Enter location',label='Location')
     email=forms.EmailField(help_text='Enter email',label='Email',validators=[validate_name])
